@@ -15,7 +15,7 @@ body, html {
     justify-content: flex-start; /* Start from the top */
     align-items: center;
     text-align: center;
-    background-image: url('../Images/bubbles2.jpg'); 
+    background-image: url('../Images/bubbles2.JPG'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -61,7 +61,7 @@ body, html {
     border-radius: 50%;
     font-size: 24px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    background-image: url('../Images/bmo1.jpg'); 
+    background-image: url('../Images/bmo1.JPG'); 
     background-size: cover;
     background-position: bottom;
     display: flex;
@@ -257,7 +257,7 @@ nav {
 }
 
 .image2 {
-    background-image: url('../Images/mates.jpg'); /* Add your image path */
+    background-image: url('../Images/mates.JPG'); /* Add your image path */
 }
 
 
@@ -333,20 +333,20 @@ nav {
 
 /* Playlist covers */
 .playlist1 {
-    background-image: url('../Images/Justice.jpg');
+    background-image: url('../Images/Justice.JPG');
 }
 
 .playlist2 {
-    background-image: url('../Images/Jaded.jpg');
+    background-image: url('../Images/Jaded.JPG');
 }
 
 /* Song covers */
 .song1 {
-    background-image: url('../Images/Roberta.jpg');
+    background-image: url('../Images/Roberta.JPG');
 }
 
 .song2 {
-    background-image: url('../Images/Coldplay.jpg');
+    background-image: url('../Images/Coldplay.JPG');
 }
 
 /* Font styling for playlist and song labels */
