@@ -1,0 +1,388 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and container adjustments */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: flex-start; /* Start from the top */
+    align-items: center;
+    text-align: center;
+    background-image: url('../images/bubbles2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Ensure the container and sections are positioned above the background */
+.container, section {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Circle styles */
+.circle {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    transition: transform 0.3s;
+    color: white;
+    text-decoration: none;
+    overflow: hidden;
+    width: 180px;
+    height: 180px;
+    font-family: 'Rubik', sans-serif; /* Apply Rubik font */
+}
+
+.main-circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-image: url('../images/bmo1.jpg'); 
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Rubik', sans-serif; /* Apply Rubik font */
+}
+
+.link-circle {
+    width: 150px;
+    height: 150px;
+    background-color: #008CBA;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    font-family: 'Rubik', sans-serif; /* Apply Rubik font */
+}
+
+.link-circle:hover, .main-circle:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+/* Navigation layout */
+nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+/* Adjust the bubble styles */
+.bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    bottom: -100px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.bubble:nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 10%;
+    animation: rise 8s infinite ease-in;
+}
+
+.bubble:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation: rise 5s infinite ease-in 1s;
+}
+
+.bubble:nth-child(3) {
+    width: 50px;
+    height: 50px;
+    left: 35%;
+    animation: rise 7s infinite ease-in 2s;
+}
+
+.bubble:nth-child(4) {
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    animation: rise 11s infinite ease-in;
+}
+
+.bubble:nth-child(5) {
+    width: 35px;
+    height: 35px;
+    left: 55%;
+    animation: rise 6s infinite ease-in 1s;
+}
+
+.bubble:nth-child(6) {
+    width: 45px;
+    height: 45px;
+    left: 65%;
+    animation: rise 8s infinite ease-in 3s;
+}
+
+.bubble:nth-child(7) {
+    width: 90px;
+    height: 90px;
+    left: 70%;
+    animation: rise 12s infinite ease-in 2s;
+}
+
+.bubble:nth-child(8) {
+    width: 25px;
+    height: 25px;
+    left: 80%;
+    animation: rise 6s infinite ease-in 2s;
+}
+
+.bubble:nth-child(9) {
+    width: 15px;
+    height: 15px;
+    left: 70%;
+    animation: rise 5s infinite ease-in 1s;
+}
+
+.bubble:nth-child(10) {
+    width: 90px;
+    height: 90px;
+    left: 25%;
+    animation: rise 10s infinite ease-in 4s;
+}
+
+/* Keyframes for bubble animation */
+@keyframes rise {
+    0% {
+        bottom: -100px;
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        bottom: 1080px;
+        transform: translateX(-200px);
+    }
+}
+
+/* Styling for About and Portfolio sections (dark blue) */
+.about-section {
+    background-color: #003366;
+    color: white;
+    padding: 50px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* Different font for the title in About, Portfolio, Music, and Contact */
+.about-section h2,
+.light-blue-section h2 {
+    font-family: 'Georgia', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* About section content layout */
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.about-text {
+    width: 50%; /* Left side width */
+    font-size: 19px; /* Increased font size */
+    line-height: 1.6; /* Space between lines for readability */
+}
+
+.about-text p {
+    margin-bottom: 20px; /* Add some space after each paragraph */
+}
+
+.about-images {
+    width: 40%; /* Right side width */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between images */
+}
+
+/* Images are now added through background-image */
+.stacked-image {
+    width: 100%;
+    height: 250px; /* Set a height */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+}
+
+.image2 {
+    background-image: url('../images/mates.jpg'); /* Add your image path */
+}
+
+
+
+/* Music section */
+.light-blue-section {
+    background-color: #66a3cc;
+    color: black;
+    padding: 50px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Section title (My Top Current Playlists and My Top Current Songs) font */
+.section-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Spotify follow button */
+.spotify-follow {
+    margin-top: 20px;
+}
+
+.follow-btn {
+    background-color: #1DB954;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.follow-btn:hover {
+    background-color: #1ed760;
+}
+
+.follow-btn:active {
+    background-color: #19843b;
+}
+
+/* Styling for music row */
+.music-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+/* Playlist and song cover styles */
+.music-cover {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.music-cover:hover {
+    transform: scale(1.05);
+}
+
+.music-cover:active {
+    transform: scale(0.95);
+}
+
+/* Playlist covers */
+.playlist1 {
+    background-image: url('../images/Justice.jpg');
+}
+
+.playlist2 {
+    background-image: url('../images/Jaded.jpg');
+}
+
+/* Song covers */
+.song1 {
+    background-image: url('../images/Roberta.jpg');
+}
+
+.song2 {
+    background-image: url('../images/Coldplay.jpg');
+}
+
+/* Font styling for playlist and song labels */
+.section-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* Contact buttons styling */
+.contact-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.contact-btn {
+    background-color: #003366; /* Dark blue background for buttons */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #00509e;
+}
+
+.contact-btn:active {
+    background-color: #001f4d;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
